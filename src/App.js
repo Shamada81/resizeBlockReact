@@ -1,24 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState, useEffect, useRef } from 'react';
+import CommandName from './components/CommandName'
+import Wrapper from "./components/Wrapper";
 
 function App() {
+  const baseString = "НоваяВестляндия Бромвич Альбиономания";
+  const baseStringArray = baseString.split(' ');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Wrapper array={baseStringArray} />
   );
 }
 
